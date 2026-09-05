@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V.STORE</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Верхня бордова смужка -->
+    <div class="top-banner">
+        Найкращі світові бренди в одному місці
+    </div>
+
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <!-- Верхній рядок -->
+        <div class="header-main">
+
+            <!-- Пошук -->
+            <div class="search-box">
+
+                <span class="search-icon"></span>
+
+                <input
+                    type="text"
+                    placeholder="Пошук"
+                >
+
+            </div>
+
+
+            <!-- Логотип -->
+            <div class="logo">
+                V.STORE
+            </div>
+
+
+            <!-- Іконки -->
+            <div class="header-icons">
+
+                <span class="heart-icon">
+                    ♡
+                </span>
+
+                <span class="user-icon"></span>
+
+                <span class="bag-icon"></span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Навігація -->
+        <nav class="navigation">
+
+            <a href="#">МЕЙКАП</a>
+
+            <a href="#">ОБЛИЧЧЯ</a>
+
+            <a href="#">ВОЛОССЯ</a>
+
+            <a href="#">ТІЛО</a>
+
+            <a href="#">АРОМАТИ</a>
+
+            <a href="#">ПОДАРУНКИ</a>
+
+            <a href="#">ЗНИЖКИ</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- БЕСТСЕЛЕРИ -->
+    <section class="bestsellers">
+
+        <div class="section-header">
+
+            <h1>
+                Бестселери
+            </h1>
+
+            <a href="#">
+                ПЕРЕГЛЯНУТИ ВСЕ
+            </a>
+
+        </div>
+
+
+        <div class="products">
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <span class="badge">Бестселер</span>
+                    <span class="favorite">♡</span>
+                </div>
+
+                <div class="brand">NARS</div>
+
+                <h2>
+                    Radiant creamy
+                    concealer Creme...
+                </h2>
+
+                <p>
+                    Освітлюючий консилер
+                    для обличчя
+                </p>
+
+                <div class="details">
+                    Відтінки: 2<br>
+                    Об'єм: 1
+                </div>
+
+                <div class="price">
+                    1650 ₴
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <span class="badge">Бестселер</span>
+                    <span class="favorite">♡</span>
+                </div>
+
+                <div class="brand">UNICO</div>
+
+                <h2>
+                    Lip pencil Diva
+                </h2>
+
+                <p>
+                    Олівець для губ
+                </p>
+
+                <div class="details">
+                    Відтінки: 4
+                </div>
+
+                <div class="price">
+                    330 ₴
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <span class="badge">Бестселер</span>
+                    <span class="favorite">♡</span>
+                </div>
+
+                <div class="brand">MURAN</div>
+
+                <h2>
+                    Silky 06 hydrating
+                    restructuring...
+                </h2>
+
+                <p>
+                    Шампунь
+                    зволожувальний...
+                </p>
+
+                <div class="details">
+                    Об'єм: 2
+                </div>
+
+                <div class="price">
+                    580 ₴
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <span class="badge">Бестселер</span>
+                    <span class="favorite">♡</span>
+                </div>
+
+                <div class="brand">MURAN</div>
+
+                <h2>
+                    Spicy detangling
+                    hair spray
+                </h2>
+
+                <p>
+                    Спрей для легкого
+                    розчісування
+                </p>
+
+                <div class="details">
+                    &nbsp;
+                </div>
+
+                <div class="price">
+                    1460 ₴
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script>
+
+        const favorites =
+            document.querySelectorAll('.favorite');
+
+        favorites.forEach(function(button) {
+
+            button.addEventListener('click', function() {
+
+                if (button.classList.contains('active')) {
+
+                    button.classList.remove('active');
+
+                    button.textContent = '♡';
+
+                } else {
+
+                    button.classList.add('active');
+
+                    button.textContent = '♥';
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

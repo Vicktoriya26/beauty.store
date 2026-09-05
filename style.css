@@ -1,0 +1,1358 @@
+/* =====================================================
+   V.STORE — STYLE.CSS
+   Палітра:
+   Tiffany   #65D6D0
+   Chocolate #4A2926
+   Cream     #FFFDFC
+   ===================================================== */
+
+
+/* =====================================================
+   GOOGLE FONTS
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+
+/* =====================================================
+   ЗМІННІ
+   ===================================================== */
+
+:root {
+    --tiffany: #65D6D0;
+    --tiffany-light: #E4F8F6;
+    --chocolate: #4A2926;
+    --chocolate-light: #745956;
+    --cream: #FFFDFC;
+    --white: #FFFFFF;
+    --border: #D5EFED;
+}
+
+
+/* =====================================================
+   RESET
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    background: var(--cream);
+
+    color: var(--chocolate);
+
+    font-family: 'Montserrat', sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   ВЕРХНЯ СМУЖКА
+   ===================================================== */
+
+.top-banner {
+
+    width: 100%;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--chocolate);
+
+    color: var(--white);
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.1px;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.header {
+
+    width: 100%;
+
+    background: var(--cream);
+}
+
+
+/* =====================================================
+   ОСНОВНИЙ РЯДОК HEADER
+   ===================================================== */
+
+.header-main {
+
+    width: 100%;
+
+    height: 120px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--cream);
+}
+
+
+/* =====================================================
+   ЛОГОТИП
+   ===================================================== */
+
+.logo {
+
+    color: var(--chocolate);
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 65px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: 3px;
+
+    white-space: nowrap;
+
+    user-select: none;
+}
+
+
+/* =====================================================
+   ПОШУК
+   ===================================================== */
+
+.search-box {
+
+    position: absolute;
+
+    left: 4.8%;
+
+    top: 40px;
+
+    width: 380px;
+
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border-bottom: 2px solid var(--tiffany);
+
+    transition: border-color 0.25s ease;
+}
+
+
+.search-box:focus-within {
+
+    border-color: var(--chocolate);
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 0;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--chocolate);
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 21px;
+
+    font-weight: 400;
+}
+
+
+.search-box input::placeholder {
+
+    color: var(--chocolate-light);
+
+    opacity: 0.75;
+}
+
+
+/* =====================================================
+   ЛУПА
+   ===================================================== */
+
+.search-icon {
+
+    width: 22px;
+
+    height: 22px;
+
+    flex-shrink: 0;
+
+    position: relative;
+
+    border: 3px solid var(--chocolate);
+
+    border-radius: 50%;
+}
+
+
+.search-icon::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 10px;
+
+    height: 3px;
+
+    right: -8px;
+
+    bottom: -5px;
+
+    background: var(--chocolate);
+
+    border-radius: 3px;
+
+    transform: rotate(45deg);
+}
+
+
+/* =====================================================
+   ІКОНКИ HEADER
+   ===================================================== */
+
+.header-icons {
+
+    position: absolute;
+
+    right: 4.8%;
+
+    top: 40px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 27px;
+
+    color: var(--chocolate);
+}
+
+
+/* Загальні іконки */
+
+.message-icon,
+.store-icon,
+.heart-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--chocolate);
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.message-icon:hover,
+.store-icon:hover,
+.heart-icon:hover {
+
+    color: var(--tiffany);
+
+    transform: scale(1.08);
+}
+
+
+.message-icon {
+
+    font-size: 35px;
+
+    line-height: 1;
+}
+
+
+.store-icon {
+
+    font-size: 34px;
+
+    line-height: 1;
+}
+
+
+.heart-icon {
+
+    font-size: 45px;
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   USER ICON
+   ===================================================== */
+
+.user-icon {
+
+    width: 31px;
+
+    height: 32px;
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+}
+
+
+.user-icon::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 11px;
+
+    height: 11px;
+
+    top: 0;
+
+    left: 7px;
+
+    border: 3px solid var(--chocolate);
+
+    border-radius: 50%;
+}
+
+
+.user-icon::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 25px;
+
+    height: 12px;
+
+    left: 0;
+
+    bottom: 0;
+
+    border: 3px solid var(--chocolate);
+
+    border-radius: 15px 15px 0 0;
+}
+
+
+/* =====================================================
+   BAG ICON
+   ===================================================== */
+
+.bag-icon {
+
+    width: 29px;
+
+    height: 28px;
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    border: 3px solid var(--chocolate);
+
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+
+.bag-icon::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 11px;
+
+    height: 10px;
+
+    top: -12px;
+
+    left: 6px;
+
+    border: 3px solid var(--chocolate);
+
+    border-bottom: none;
+
+    border-radius: 10px 10px 0 0;
+}
+
+
+/* =====================================================
+   НАВІГАЦІЯ
+   ===================================================== */
+
+.navigation {
+
+    width: 100%;
+
+    height: 77px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 5.5%;
+
+    background: var(--cream);
+
+    border-bottom: 4px solid var(--tiffany);
+
+    overflow: hidden;
+}
+
+
+.navigation a {
+
+    position: relative;
+
+    color: var(--chocolate);
+
+    text-decoration: none;
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+
+.navigation a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -10px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--tiffany);
+
+    transition: width 0.25s ease;
+}
+
+
+.navigation a:hover {
+
+    color: var(--tiffany);
+}
+
+
+.navigation a:hover::after {
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   BESTSELLERS
+   ===================================================== */
+
+.bestsellers {
+
+    width: 100%;
+
+    padding: 43px 3.2% 80px;
+
+    background: var(--cream);
+}
+
+
+/* =====================================================
+   ЗАГОЛОВОК BESTSELLERS
+   ===================================================== */
+
+.section-header {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 45px;
+}
+
+
+.section-header h1 {
+
+    color: var(--chocolate);
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 38px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+.section-header a {
+
+    color: var(--chocolate);
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid var(--chocolate);
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.section-header a:hover {
+
+    color: var(--tiffany);
+
+    border-color: var(--tiffany);
+}
+
+
+/* =====================================================
+   GRID ТОВАРІВ
+   ===================================================== */
+
+.products {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 48px;
+}
+
+
+/* =====================================================
+   PRODUCT CARD
+   ===================================================== */
+
+.product-card {
+
+    min-width: 0;
+
+    background: transparent;
+
+    transition: transform 0.25s ease;
+}
+
+
+/* =====================================================
+   ЗОБРАЖЕННЯ ТОВАРУ
+   ===================================================== */
+
+.product-image {
+
+    width: 100%;
+
+    height: 245px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--white);
+
+    overflow: visible;
+}
+
+
+/* =====================================================
+   БЕСТСЕЛЕР
+   ===================================================== */
+
+.badge {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    z-index: 5;
+
+    padding: 9px 16px;
+
+    background: var(--tiffany);
+
+    color: var(--chocolate);
+
+    border-radius: 22px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   СЕРЦЕ
+   ===================================================== */
+
+.favorite {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 3px;
+
+    z-index: 5;
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--chocolate);
+
+    font-size: 39px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.favorite:hover {
+
+    color: var(--tiffany);
+
+    transform: scale(1.12);
+}
+
+
+.favorite.active {
+
+    color: var(--tiffany);
+}
+
+
+/* =====================================================
+   BRAND
+   ===================================================== */
+
+.brand {
+
+    margin-top: 9px;
+
+    margin-bottom: 9px;
+
+    color: var(--chocolate-light);
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    line-height: 1.3;
+}
+
+
+/* =====================================================
+   НАЗВА ТОВАРУ
+   ===================================================== */
+
+.product-card h2 {
+
+    min-height: 66px;
+
+    color: var(--chocolate);
+
+    font-size: 23px;
+
+    font-weight: 500;
+
+    line-height: 1.45;
+}
+
+
+/* =====================================================
+   ОПИС ТОВАРУ
+   ===================================================== */
+
+.product-card p {
+
+    min-height: 48px;
+
+    margin-top: 5px;
+
+    color: var(--chocolate-light);
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   ДЕТАЛІ
+   ===================================================== */
+
+.details {
+
+    min-height: 25px;
+
+    margin-top: 12px;
+
+    color: var(--chocolate);
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    line-height: 1.45;
+}
+
+
+/* =====================================================
+   ЦІНА
+   ===================================================== */
+
+.price {
+
+    margin-top: 10px;
+
+    color: var(--chocolate);
+
+    font-size: 29px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+/* =====================================================
+   HOVER КАРТОЧКИ
+   ===================================================== */
+
+.product-card:hover .price {
+
+    color: #65D6D0;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 1200px) {
+
+    .logo {
+
+        font-size: 55px;
+
+    }
+
+
+    .search-box {
+
+        width: 300px;
+
+    }
+
+
+    .header-icons {
+
+        gap: 18px;
+
+    }
+
+
+    .navigation {
+
+        padding: 0 4%;
+
+    }
+
+
+    .navigation a {
+
+        font-size: 18px;
+
+    }
+
+
+    .products {
+
+        gap: 30px;
+
+    }
+
+
+    .product-card h2 {
+
+        font-size: 20px;
+
+    }
+
+}
+
+
+/* =====================================================
+   TABLET / SMALL LAPTOP
+   ===================================================== */
+
+@media (max-width: 950px) {
+
+    .header-main {
+
+        height: 115px;
+
+    }
+
+
+    .logo {
+
+        font-size: 45px;
+
+    }
+
+
+    .search-box {
+
+        left: 3%;
+
+        width: 230px;
+
+    }
+
+
+    .header-icons {
+
+        right: 3%;
+
+        gap: 14px;
+
+    }
+
+
+    .message-icon {
+
+        font-size: 29px;
+
+    }
+
+
+    .store-icon {
+
+        font-size: 29px;
+
+    }
+
+
+    .heart-icon {
+
+        font-size: 37px;
+
+    }
+
+
+    .navigation {
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        gap: 35px;
+
+        scrollbar-width: none;
+
+    }
+
+
+    .navigation::-webkit-scrollbar {
+
+        display: none;
+
+    }
+
+
+    .navigation a {
+
+        font-size: 17px;
+
+    }
+
+
+    .products {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 40px 25px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+    /* Верхня смужка */
+
+    .top-banner {
+
+        height: 42px;
+
+        padding: 0 15px;
+
+        text-align: center;
+
+        font-size: 12px;
+
+    }
+
+
+    /* Header */
+
+    .header-main {
+
+        height: 105px;
+
+    }
+
+
+    /* Logo */
+
+    .logo {
+
+        font-size: 30px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    /* Search */
+
+    .search-box {
+
+        left: 15px;
+
+        top: 66px;
+
+        width: 140px;
+
+        height: 29px;
+
+        gap: 10px;
+
+    }
+
+
+    .search-box input {
+
+        font-size: 13px;
+
+    }
+
+
+    .search-icon {
+
+        width: 17px;
+
+        height: 17px;
+
+        border-width: 2px;
+
+    }
+
+
+    .search-icon::after {
+
+        width: 8px;
+
+        height: 2px;
+
+        right: -6px;
+
+        bottom: -4px;
+
+    }
+
+
+    /* Icons */
+
+    .header-icons {
+
+        top: 25px;
+
+        right: 15px;
+
+        gap: 12px;
+
+    }
+
+
+    .message-icon,
+    .store-icon,
+    .heart-icon {
+
+        display: none;
+
+    }
+
+
+    .user-icon {
+
+        transform: scale(.8);
+
+    }
+
+
+    .bag-icon {
+
+        transform: scale(.8);
+
+    }
+
+
+    /* Navigation */
+
+    .navigation {
+
+        height: 55px;
+
+        padding: 0 15px;
+
+        gap: 27px;
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        border-bottom-width: 3px;
+
+        scrollbar-width: none;
+
+    }
+
+
+    .navigation::-webkit-scrollbar {
+
+        display: none;
+
+    }
+
+
+    .navigation a {
+
+        font-size: 13px;
+
+    }
+
+
+    /* Bestsellers */
+
+    .bestsellers {
+
+        padding: 30px 15px 50px;
+
+    }
+
+
+    .section-header {
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .section-header h1 {
+
+        font-size: 29px;
+
+    }
+
+
+    .section-header a {
+
+        font-size: 10px;
+
+    }
+
+
+    /* Products */
+
+    .products {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 35px 12px;
+
+    }
+
+
+    /* Image */
+
+    .product-image {
+
+        height: 190px;
+
+    }
+
+
+    /* Badge */
+
+    .badge {
+
+        padding: 6px 9px;
+
+        font-size: 10px;
+
+    }
+
+
+    /* Favorite */
+
+    .favorite {
+
+        top: 7px;
+
+        right: 0;
+
+        width: 35px;
+
+        height: 35px;
+
+        font-size: 28px;
+
+    }
+
+
+    /* Brand */
+
+    .brand {
+
+        margin-top: 7px;
+
+        margin-bottom: 6px;
+
+        font-size: 13px;
+
+    }
+
+
+    /* Product title */
+
+    .product-card h2 {
+
+        min-height: 50px;
+
+        font-size: 16px;
+
+        line-height: 1.4;
+
+    }
+
+
+    /* Description */
+
+    .product-card p {
+
+        min-height: 42px;
+
+        font-size: 12px;
+
+        line-height: 1.4;
+
+    }
+
+
+    /* Details */
+
+    .details {
+
+        margin-top: 8px;
+
+        font-size: 12px;
+
+    }
+
+
+    /* Price */
+
+    .price {
+
+        margin-top: 8px;
+
+        font-size: 22px;
+
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 400px) {
+
+    .logo {
+
+        font-size: 27px;
+
+    }
+
+
+    .search-box {
+
+        width: 125px;
+
+    }
+
+
+    .navigation {
+
+        gap: 22px;
+
+    }
+
+
+    .navigation a {
+
+        font-size: 12px;
+
+    }
+
+
+    .products {
+
+        gap: 30px 10px;
+
+    }
+
+
+    .product-image {
+
+        height: 175px;
+
+    }
+
+
+    .section-header h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .section-header a {
+
+        font-size: 9px;
+
+    }
+
+
+    .price {
+
+        font-size: 20px;
+
+    }
+
+}
