@@ -3,7 +3,7 @@ const SUPABASE_ANON_KEY = 'sb_publishable_6Rx3ZzmoLQ9JSCdS2Y0c0g_EXM1eQP8';
 
 let products = [];
 let cart = [];
-const productsContainer = document.querySelector("#productsGrid");
+const productsContainer = document.querySelector(".products");
 
 async function fetchData() {
   const response = await fetch(`${SUPABASE_URL}/rest/v1/products`, {
@@ -19,6 +19,20 @@ async function fetchData() {
   displayProducts(products)
 }
 
+function addToCart(productId) {
+  const product = products.find(p => p.id === productId);
+  if (!product) return;
+  const cartProduct = cart.find(p => p.id === productId);
+  if (cartProduct) {
+    cartProduct.quantity +=1;
+  } else{
+    cart.push({title: product.title, price: product.price, image: quantity });
+  }
+  saveJsonCookie("cart", cart, 3600*24*7);
+  console.log("Додано в кошик:", cart);
+}
+
+
 function createProductCard(product) {
   return `
       <div class="card" style="width: 18rem;">
@@ -26,7 +40,7 @@ function createProductCard(product) {
           <div class="card-body">
             <h5 class="card-title">${product.title}</h5>
             <p class="card-text">$${product.price}</p>
-            <button type="button" class="btn btn-warning">
+            <button onclick="addToCart(${product.id})" type="button" class="btn btn-warning">
             <i class="bi bi-cart-plus"></i> В кошик </button>
           </div>
       </div>
