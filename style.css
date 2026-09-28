@@ -609,6 +609,7 @@ body {
     min-width: 0;
 
     background: transparent;
+    position: relative;
 
     transition: transform 0.25s ease;
 }
@@ -632,8 +633,9 @@ body {
 
     justify-content: center;
 
-    
-
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     overflow: visible;
 }
 
@@ -821,6 +823,30 @@ body {
     line-height: 1.2;
 }
 
+.old-price{
+    margin-right: 10px;
+    color: var(--chocolate-light);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: line-through;
+}
+
+.add-to-cart{
+    margin-top: 15px;
+    padding: 10px 10px;
+    background: var(--chocolate);
+    color: var(--tiffany);
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
 
 /* =====================================================
    HOVER КАРТОЧКИ
