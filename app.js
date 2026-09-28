@@ -24,43 +24,56 @@ function addToCart(productId) {
   if (!product) return;
   const cartProduct = cart.find(p => p.id === productId);
   if (cartProduct) {
-    cartProduct.quantity +=1;
-  } else{
-    cart.push({title: product.title, price: product.price, image: quantity });
+    cartProduct.quantity += 1;
+  } else {
+    cart.push({ title: product.title, price: product.price, image: quantity });
   }
-  saveJsonCookie("cart", cart, 3600*24*7);
+  saveJsonCookie("cart", cart, 3600 * 24 * 7);
   console.log("Додано в кошик:", cart);
 }
 
 
 function createProductCard(product) {
   return `
-      <div class="card" style="width: 18rem;">
-          <img src="img/${product.image}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">${product.title}</h5>
-            <p class="card-text">$${product.price}</p>
-            <button onclick="addToCart(${product.id})" type="button" class="btn btn-warning">
-            <i class="bi bi-cart-plus"></i> В кошик </button>
+          <div class="product-card">
+
+          <div class="product-image" style="background-image: url('images/${product.image}');">
+              <span class="badge">Бестселер</span>
+              <span class="favorite">♡</span>
           </div>
-      </div>
-    `
+
+          <div class="brand">${product.brand}</div>
+
+          <h2>
+              ${product.title}
+          </h2>
+
+          <p>
+              ${product.description}
+          </p>
+
+          <div class="price">
+              ${product.price}₴
+          </div>
+
+        </div>
+            `
 
 }
 
 
 function displayProducts(products) {
-    productsContainer.innerHTML = "";
-    products.forEach(product => {
-      const productCard = createProductCard(product);
-      productsContainer.innerHTML += productCard;
+  productsContainer.innerHTML = "";
+  products.forEach(product => {
+    const productCard = createProductCard(product);
+    productsContainer.innerHTML += productCard;
 
-    })
+  })
 }
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetchData();
+  fetchData();
 
 })
 
