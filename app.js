@@ -118,3 +118,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
 })
 
+// Додавання товару в кошик
+
+document.addEventListener("click", function (event) {
+
+  const button = event.target.closest(".add-to-cart");
+
+  if (!button) {
+      return;
+  }
+
+  const id = button.dataset.id;
+  const name = button.dataset.name;
+  const price = Number(button.dataset.price);
+
+  let cart = JSON.parse(
+      localStorage.getItem("cart")
+  ) || [];
+
+  const existingProduct = cart.find(function (item) {
+      return item.id === id;
+  });
+
+  if (existingProduct) {
+
+      existingProduct.quantity++;
+
+  } else {
+
+      cart.push({
+          id: id,
+          name: name,
+          price: price,
+          quantity: 1
+      });
+
+  }
+
+  localStorage.setItem(
+      "cart",
+      JSON.stringify(cart)
+  );
+
+  alert("Товар додано до кошика 🛍️");
+
+});
+
+
