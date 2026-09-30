@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Кошик — V.STORE</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- Верхня бордова смужка -->
+    <div class="top-banner">
+        Найкращі світові бренди в одному місці
+    </div>
+
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="header-main">
+
+            <!-- Логотип -->
+            <a
+                href="index.html"
+                class="logo"
+            >
+                V.STORE
+            </a>
+
+
+            <!-- Іконки -->
+            <div class="header-icons">
+
+                <span class="heart-icon">
+                    ♡
+                </span>
+
+                <span class="user-icon"></span>
+
+                <!-- Кошик -->
+                <a
+                    href="cart.html"
+                    class="bag-icon"
+                    aria-label="Кошик"
+                ></a>
+
+            </div>
+
+        </div>
+
+
+        
+
+    </header>
+
+
+
+    <!-- =========================
+         СТОРІНКА КОШИКА
+    ========================== -->
+
+    <main class="cart-page">
+
+        <div class="cart-container">
+
+            <h1 class="cart-title">
+                Мій кошик
+            </h1>
+
+
+            <!-- ТУТ БУДУТЬ ТОВАРИ -->
+            <div
+                id="cartItems"
+                class="cart-items"
+            >
+
+                <p class="empty-cart">
+                    Ваш кошик порожній 🛍️
+                </p>
+
+            </div>
+
+
+            <!-- ПІДСУМОК -->
+            <div class="cart-summary">
+
+                <div class="cart-total">
+
+                    <span>
+                        Разом:
+                    </span>
+
+                    <strong id="cartTotal">
+                        0₴
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="checkout-button"
+                    type="button"
+                >
+                    Оформити замовлення
+                </button>
+
+            </div>
+
+
+            <!-- ПОВЕРНУТИСЯ ДО МАГАЗИНУ -->
+            <a
+                href="index.html"
+                class="back-to-shop"
+            >
+                ← Повернутися до магазину
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- JavaScript кошика -->
+    <script src="cart.js"></script>
+
+</body>
+
+</html>
