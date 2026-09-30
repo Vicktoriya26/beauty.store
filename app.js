@@ -168,7 +168,8 @@ document.addEventListener("click", function (event) {
 const searchInput = document.querySelector(".search-input");
 searchInput.addEventListener("input", function () {
   const text = searchInput.value.toLowerCase();
-  const filtered = products.filter(product => product.title.toLowerCase().includes(text));
+  const filtered = products.filter(product => product.category.toLowerCase().includes(text) || product.title.toLowerCase().includes(text));
+      
   displayProducts(filtered);
 });
 
