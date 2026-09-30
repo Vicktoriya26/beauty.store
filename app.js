@@ -40,16 +40,17 @@ async function fetchData() {
   displayProducts(products)
 }
 
-function addToCart(productId) {
+function addToCart(productId, button) {
   const product = products.find(p => p.id === productId);
   if (!product) return;
   const cartProduct = cart.find(p => p.id === productId);
   if (cartProduct) {
     cartProduct.quantity += 1;
   } else {
-    cart.push({ title: product.title, price: product.price, image: product.image,  quantity: 1 });
+    cart.push({ id: product.id, title:  product.title, price: product.price, discount_price: product.discount_price, image: product.image,  quantity: 1 });
   }
-  saveJsonCookie("cart", cart, 3600 * 24 * 7);
+  button.innerHTML = `<i class="bi bi-bag-check"></i>`;
+  localStorage.setItem("cart", JSON.stringify(cart));
   console.log("Додано в кошик:", cart);
 }
 
@@ -162,6 +163,13 @@ document.addEventListener("click", function (event) {
 
   alert("Товар додано до кошика 🛍️");
 
+});
+
+const searchInput = document.querySelector(".search-input");
+searchInput.addEventListener("input", function () {
+  const text = searchInput.value.toLowerCase();
+  const filtered = products.filter(product => product.title.toLowerCase().includes(text));
+  displayProducts(filtered);
 });
 
 

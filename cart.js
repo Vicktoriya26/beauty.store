@@ -1,23 +1,10 @@
 const cartContainer = document.getElementById("cartItems")
 
-function getJsonCookie(cookieName) {
-    const allCookies = document.cookie.split('; ');
-    const targetCookie = allCookies.find(row => row.startsWith(cookieName +
-        '='));
-    if(targetCookie) {
-
-        const encodeData = targetCookie.split('=')[1];
-        return JSON.parse(decodeURIComponent(encodeData));
-    }
-    return null;
-}
-
-
-
 let cart = JSON.parse(
     localStorage.getItem("cart")
 ) || [];
 
+console.log(cart);
 
 const cartItems = document.getElementById("cartItems");
 const cartTotal = document.getElementById("cartTotal");
@@ -58,7 +45,7 @@ function showCart() {
         product.innerHTML = `
 
             <h3>
-                ${item.name}
+                ${item.title}
             </h3>
 
             <p>
@@ -72,7 +59,7 @@ function showCart() {
             <button
                 onclick="changeQuantity('${item.id}', -1)"
             >
-                −
+                -
             </button>
 
             <button
@@ -91,7 +78,7 @@ function showCart() {
         `;
 
 
-        cartItems.appendChild(product);
+        cartItems.append(product);
 
     });
 
@@ -103,7 +90,7 @@ function showCart() {
 function changeQuantity(id, change) {
 
     const item = cart.find(function (item) {
-        return item.id === id;
+        return item.id == id;
     });
 
 
@@ -137,7 +124,7 @@ function changeQuantity(id, change) {
 function removeProduct(id) {
 
     cart = cart.filter(function (item) {
-        return item.id !== id;
+        return item.id != id;
     });
 
 
@@ -151,32 +138,10 @@ function removeProduct(id) {
 }
 
 
-showCart();
 
 
-
-function createCartItemElement(item) {
-    return 
-}
-
-
-
-
-
-
-function displayCartItems() {
-    cartContainer.innerHTML = "";
-    if (cart.length === 0){
-        cartContainer.innerHTML = "<p>Кошик порожній</p>";
-        return;
-    }
-    cart.forEach(item => {
-        cartContainer.innerHTML += createCartItemElement(item);
-    });
-    
-    
-}
 
 document.addEventListener("DOMContentLoaded", () => {
-    displayCartItems();
+    showCart();
+    
 });
