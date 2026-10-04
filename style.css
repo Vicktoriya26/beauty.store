@@ -1651,3 +1651,238 @@ body {
     background: #6b3731;
     color: white;
 }
+
+
+/* Тільки кнопки +, - та Видалити */
+.quantity button,
+.plus,
+.minus,
+.delete,
+.remove {
+    background-color: #40E0D0 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 4px !important;
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+}
+
+/* Ефект при наведенні */
+.quantity button:hover,
+.plus:hover,
+.minus:hover,
+.delete:hover,
+.remove:hover {
+    background-color: #20BDB0 !important;
+}
+
+
+/* =================================
+   ФОРМА ОФОРМЛЕННЯ ЗАМОВЛЕННЯ
+================================= */
+
+.checkout-form {
+    width: 100%;
+    margin-top: 30px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.checkout-title {
+    background: #222;
+    color: #fff;
+    padding: 14px 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.checkout-content {
+    padding: 22px;
+}
+
+.checkout-field {
+    margin-bottom: 15px;
+}
+
+.checkout-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #444;
+}
+
+.checkout-field input,
+.checkout-field textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+}
+
+.checkout-field input:focus,
+.checkout-field textarea:focus {
+    border-color: #888;
+}
+
+.checkout-field textarea {
+    min-height: 75px;
+    resize: vertical;
+}
+
+.payment-title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #444;
+}
+
+.payment-options {
+    margin-bottom: 20px;
+}
+
+.payment-options label {
+    display: block;
+    margin: 9px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.payment-options input {
+    margin-right: 7px;
+}
+
+.confirm-order {
+    width: 100%;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #20a64a;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.confirm-order:hover {
+    background: #188b3c;
+}
+
+/* =================================
+   КОЛЬОРИ V.STORE
+   ТІФАННИЙ + КОРИЧНЕВИЙ
+================================= */
+
+/* Верхня смужка */
+.top-banner {
+    background: #5A3825 !important;
+    color: #ffffff !important;
+}
+
+
+/* Логотип */
+.logo {
+    color: #5A3825 !important;
+}
+
+
+/* Іконки */
+.header-icons {
+    color: #5A3825;
+}
+
+.heart-icon {
+    color: #5A3825 !important;
+}
+
+
+/* Заголовок кошика */
+.cart-title {
+    color: #5A3825 !important;
+}
+
+
+/* Сума */
+.cart-total strong {
+    color: #5A3825 !important;
+}
+
+
+/* Кнопка "Оформити замовлення" */
+.checkout-button {
+    background: #40E0D0 !important;
+    color: #5A3825 !important;
+    border-color: #40E0D0 !important;
+}
+
+.checkout-button:hover {
+    background: #32cfc0 !important;
+}
+
+
+/* =================================
+   ФОРМА ОФОРМЛЕННЯ
+================================= */
+
+.checkout-form {
+    border-color: #40E0D0;
+}
+
+
+/* Верх форми */
+.checkout-title {
+    background: #5A3825 !important;
+    color: #ffffff !important;
+}
+
+
+/* Поля */
+.checkout-field input:focus,
+.checkout-field textarea:focus {
+    border-color: #40E0D0 !important;
+    box-shadow: 0 0 0 2px rgba(64, 224, 208, 0.15);
+}
+
+
+/* Заголовки полів */
+.checkout-field label,
+.payment-title {
+    color: #5A3825 !important;
+}
+
+
+/* Radio */
+.payment-options input {
+    accent-color: #40E0D0;
+}
+
+
+/* Підтвердити замовлення */
+.confirm-order {
+    background: #40E0D0 !important;
+    color: #5A3825 !important;
+}
+
+.confirm-order:hover {
+    background: #32cfc0 !important;
+}
+
+
+/* Повернутися до магазину */
+.back-to-shop {
+    color: #5A3825 !important;
+}
+
+.back-to-shop:hover {
+    color: #40E0D0 !important;
+}

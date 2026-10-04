@@ -145,3 +145,13 @@ document.addEventListener("DOMContentLoaded", () => {
     showCart();
     
 });
+
+const confirmOrderButton = document.querySelector(".confirm-order");
+
+if (confirmOrderButton) {
+    confirmOrderButton.addEventListener("click", function () {
+
+        alert("✅ Замовлення оформлено!");
+
+    });
+}
