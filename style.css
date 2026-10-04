@@ -1685,6 +1685,7 @@ body {
 ================================= */
 
 .checkout-form {
+    max-width: 900px;
     width: 100%;
     margin-top: 30px;
     background: #fff;
@@ -1836,6 +1837,7 @@ body {
 
 .checkout-form {
     border-color: #40E0D0;
+    margin: 20px;
 }
 
 
@@ -1885,4 +1887,14 @@ body {
 
 .back-to-shop:hover {
     color: #40E0D0 !important;
+}
+
+.cart-page {
+    padding: 20px;
+}
+
+.cart-item button {
+    background-color: #40E0D0;
+    padding: 5px 10px;
+    border: none;
 }
